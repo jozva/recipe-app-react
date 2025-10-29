@@ -23,11 +23,11 @@ function Form({ onClose, get_data, mode, existingData }) {
             try {
                 if (mode === "edit" && existingData?._id) {
                     await axios.put(
-                        `http://localhost:8000/user/${existingData._id}`,
+                        `https://recipe-app-node-0vep.onrender.com/user/${existingData._id}`,
                         values
                     );
                 } else {
-                    await axios.post("http://localhost:8000/user", values);
+                    await axios.post("https://recipe-app-node-0vep.onrender.com/user", values);
                     toast.success("Recipe added successfully!");
                 }
                 formik.resetForm();
