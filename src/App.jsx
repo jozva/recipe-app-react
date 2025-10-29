@@ -11,7 +11,7 @@ function App() {
 
   const get_data = async () => {
     try {
-      const products = await axios.get("http://localhost:8000/user");
+      const products = await axios.get("mongodb+srv://jozva:Josva@2624@cluster0.k7mu3g7.mongodb.net/?appName=Cluster0");
       setUsers(products.data);
     } catch (error) {
       console.log(error);
