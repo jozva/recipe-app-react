@@ -11,7 +11,7 @@ function App() {
 
   const get_data = async () => {
     try {
-      const products = await axios.get("mongodb+srv://jozva:Josva@2624@cluster0.k7mu3g7.mongodb.net/?appName=Cluster0");
+      const products = await axios.get("https://recipe-app-node-0vep.onrender.com/user");
       setUsers(products.data);
     } catch (error) {
       console.log(error);
@@ -38,7 +38,7 @@ function App() {
     try {
       const delete_cnf = confirm("Are you sure want to delete")
       if(delete_cnf){
-       await axios.delete(`http://localhost:8000/user/${id}`);
+       await axios.delete(`https://recipe-app-node-0vep.onrender.com/user/${id}`);
        setUsers((prev) => prev.filter((u) => u._id !== id));}
     } catch (error) {
       console.log("Delete error:", error);
